@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategorieController;
-use App\Http\Controllers\sCategorieController;
+use App\Http\Controllers\ScategorieController;
 use App\Http\Controllers\ArticleController;
 
 

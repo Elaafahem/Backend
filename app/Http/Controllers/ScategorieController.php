@@ -32,7 +32,7 @@ class ScategorieController extends Controller
                 "categorieID" => $request->input("categorieID")
             ]);
             $scategorie->save();
-            return response()->json($scategorie,200);
+            return response()->json($scategorie, 200);
         } catch (\Exception $e) {
             return response()->json("insertion impossible {$e->getMessage()}");
         }
@@ -45,7 +45,7 @@ class ScategorieController extends Controller
     {
         try {
             $scategorie = Scategorie::with('categorie')->findOrFail($id);
-            return response()->json($scategorie,200);
+            return response()->json($scategorie, 200);
         } catch (\Exception $e) {
             return response()->json("Sélection impossible {$e->getMessage()}");
         }
@@ -59,7 +59,7 @@ class ScategorieController extends Controller
         try {
             $scategorie = Scategorie::findorFail($id);
             $scategorie->update($request->all());
-            return response()->json($scategorie,200);
+            return response()->json($scategorie, 200);
         } catch (\Exception $e) {
             return response()->json("Modification impossible {$e->getMessage()}");
         }
